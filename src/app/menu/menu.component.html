@@ -1,0 +1,19 @@
+
+<div *ngIf="autenticated">
+    <table>
+    <td [routerLink]="['/dashboard']"><button class="bmenu">Home</button></td>
+    <td>{{user.name}}</td>
+    <td><button class="bmenu" (click)="logout()"> Cerrar sesión</button> </td>
+</table>
+</div>
+<div *ngIf="autenticated == false">
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit(registerForm.value)">
+    <h3>Iniciar sesión</h3>
+    <input type="text" formControlName="dni" placeholder="DNI"><br>
+    <input type="password" formControlName="password" placeholder="contraseña"><br>
+    <button class="boton"> Entrar</button>
+</form>
+</div>
+
+
+

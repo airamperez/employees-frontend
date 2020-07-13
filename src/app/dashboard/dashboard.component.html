@@ -1,0 +1,30 @@
+<div *ngIf = "admin">
+    <table>
+        <td>
+            <button [routerLink]="['/employedList']"> empleados</button>
+        </td>
+        <td>
+            <button [routerLink]="['/createEmployed']">Añadir</button>
+        </td>
+        <td>
+            <button [routerLink]="['/gestion']">Gestión</button>
+        </td>
+    </table>
+    
+    
+   
+</div>
+<div *ngIf = "employed">
+    <table class="employe">
+        <tr>
+            <td style= "padding-right:50px">
+            <tr>Día: {{dia}}</tr>
+            <tr>Nombre: {{user.name}}</tr>
+            <tr>Puesto: {{user.puesto}}</tr>
+            <tr>Horario: {{user.horario}}</tr>
+            <tr>Salario: {{user.salario}}€</tr>
+            </td>
+        </tr>
+        </table>
+</div>
+

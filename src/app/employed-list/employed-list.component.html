@@ -1,0 +1,23 @@
+
+<div class="tabla1" *ngIf = "selectedEmployed == undefined">
+    <h3 class="list">Lista de Empleados</h3>
+    <table class="list" *ngFor="let user of employedList; index as i">
+        <tr>
+            <td class="td1">{{user.name}}</td>
+            <td class="td1">{{user.puesto}}</td>
+            <td class="td1">{{user.horario}}</td>
+            <td ><button class="detail" (click)="employedDetails(user._id)">detales</button></td>
+
+        </tr>
+
+    </table>
+</div>
+<div *ngIf="selectedEmployed">
+    <p>Nombre:  {{selectedEmployed.name}}</p><br/>
+    <p>DNI:     {{selectedEmployed.dni}}</p><br/>
+    <p>Puesto:  {{selectedEmployed.puesto}}</p><br/>
+    <p>Horario: {{selectedEmployed.horario}}</p><br/>
+    <p>Salario: {{selectedEmployed.salario}}€</p><br/>
+    <button  class="boton" (click)="selectedEmployed=undefined">Volver</button>
+    <button class="boton" (click)="delete(selectedEmployed.dni)">Borrar</button>
+</div>

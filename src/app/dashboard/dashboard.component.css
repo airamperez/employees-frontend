@@ -1,0 +1,26 @@
+table{
+    padding-top: 10%;
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    border-color: black;
+}
+button {
+    background-color:#5b77cc;
+    border-radius: 4px;
+    width: 70%;
+    border: none;
+    color: white;
+    padding: 50px 60px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+}
+.employe{
+    width: 50%;
+    margin-left: 100px;
+    margin-right: 10px;
+    text-align: left;
+    font-size: 30px;
+}
